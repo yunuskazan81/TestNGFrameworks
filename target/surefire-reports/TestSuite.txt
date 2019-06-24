@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 5.644 s <<< FAILURE! - in TestSuite
+generateReport(com.syntax.testcases.AddEmployeePageTest)  Time elapsed: 0.375 s  <<< FAILURE!
+java.lang.NullPointerException
+
