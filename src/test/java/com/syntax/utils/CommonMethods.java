@@ -4,8 +4,10 @@ package com.syntax.utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -594,6 +596,46 @@ public static String takeScreenshot(String fileName) {
 		System.out.println("Unable to take screesnhot");
 	}
 	return dest;
+}
+
+/**
+ * this method enables to switch windows from one to another
+ * @author yunuskazan
+ * @param element
+ */
+public static void getWindowsHandle(WebElement element) {
+	
+	
+	String ParentTitle= driver.getTitle();
+	String ParentID= driver.getWindowHandle();
+	
+	System.out.println("Parent window Title: "+ ParentTitle+" ID: "+ParentID);
+	
+	element.click(); // text() only can get used by  xpath not css... keep in mind..
+	
+	Set<String> allwindows= driver.getWindowHandles();
+	
+	Iterator<String> it= allwindows.iterator();
+	
+	while(it.hasNext()) {
+		
+		String ChildID= it.next();
+		
+		if(ParentID!= ChildID) {
+			
+			driver.switchTo().window(ChildID);
+			
+			String 	ChildTitle= driver.getTitle();
+			
+			System.out.println("Child window Title: "+ ChildTitle +" ID: "+ChildID);
+			
+		}
+		
+		
+	}
+	
+	
+	
 }
     
     

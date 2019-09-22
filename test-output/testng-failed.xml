@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Smoke Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="com.syntax.utils.Listeners"/>
-  </listeners>
-  <test thread-count="5" name="Smoke Test(failed)">
-    <groups>
-      <run>
-        <include name="smoke"/>
-        <exclude name="regression"/>
-      </run>
-    </groups>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.syntax.testcases.LoginPageTest1">
+      <class name="com.syntax.practices.ExcetoDataProvider">
         <methods>
           <include name="generateReport"/>
           <include name="setUp"/>
-          <include name="doLogin"/>
           <include name="flushReport"/>
+          <include name="addEmployee"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.syntax.testcases.LoginPageTest1 -->
+      </class> <!-- com.syntax.practices.ExcetoDataProvider -->
     </classes>
-  </test> <!-- Smoke Test(failed) -->
-</suite> <!-- Failed suite [Smoke Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

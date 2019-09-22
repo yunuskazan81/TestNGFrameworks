@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [regression]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="regression(failed)">
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.syntax.testcases.LoginPageTest1">
+        <methods>
+          <include name="generateReport"/>
+          <include name="setUp"/>
+          <include name="flushReport"/>
+          <include name="negativeLogin"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.syntax.testcases.LoginPageTest1 -->
+      <class name="com.syntax.testcases.TransferDataFromExceToDataprovider">
+        <methods>
+          <include name="generateReport"/>
+          <include name="addEmployee"/>
+          <include name="setUp"/>
+          <include name="flushReport"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.syntax.testcases.TransferDataFromExceToDataprovider -->
+    </classes>
+  </test> <!-- regression(failed) -->
+</suite> <!-- Failed suite [regression] -->

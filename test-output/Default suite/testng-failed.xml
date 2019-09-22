@@ -5,8 +5,10 @@
     <classes>
       <class name="com.syntax.practices.ExcetoDataProvider">
         <methods>
+          <include name="generateReport"/>
           <include name="setUp"/>
-          <include name="addEmployee" invocation-numbers="10"/>
+          <include name="flushReport"/>
+          <include name="addEmployee"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.syntax.practices.ExcetoDataProvider -->
