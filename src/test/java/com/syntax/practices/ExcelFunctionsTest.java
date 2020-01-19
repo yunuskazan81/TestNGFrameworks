@@ -13,7 +13,7 @@ public class ExcelFunctionsTest {
 		ExcelUtility obj=new ExcelUtility();
 		obj.openExcel(Constants.XL_FILEPATH, "Locations");
 		String value = obj.getCellData(2, 3);
-		System.out.println(value);
+	System.out.println(value);
 	
 	}
 }
